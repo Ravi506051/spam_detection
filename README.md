@@ -20,5 +20,11 @@ This project is a simple yet powerful **Spam Message Detector** that uses machin
 
 Run the Streamlit app to interact with the model using a web interface.
 
-## 📁 File Structure
+## Requirements
+
+run this on your terminal
+pip install streamlit
+
+then run this to see the project working
+python -m streamlit run app.py
 
