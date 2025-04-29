@@ -23,8 +23,8 @@ Run the Streamlit app to interact with the model using a web interface.
 ## Requirements
 
 run this on your terminal
-pip install streamlit
+-pip install streamlit
 
 then run this to see the project working
-python -m streamlit run app.py
+-python -m streamlit run app.py
 
