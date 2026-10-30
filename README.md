@@ -71,3 +71,11 @@ Add the actual metric values after running the model; do not assume performance 
 Ravi Kumar Rao
 
 GitHub: https://github.com/Ravi506051
+
+## Reproducible Evaluation Checklist
+
+Before comparing model versions, keep the same train/test split and record the preprocessing steps used for each run. Review precision and recall together: a model that catches more spam may also incorrectly flag more legitimate messages. Save the confusion matrix and classification report with each experiment, and report only values produced by an actual run.
+
+## Responsible Use
+
+Treat predictions as decision support rather than certainty. Test with varied message wording, spelling mistakes, and unseen examples, and avoid uploading private SMS conversations to a public demo.
