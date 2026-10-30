@@ -85,3 +85,9 @@ Treat predictions as decision support rather than certainty. Test with varied me
 Add a small, versioned evaluation set and compare precision, recall, F1-score, and false-positive examples. Keep text preprocessing identical between training and inference.
 
 For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
+
+### Technical Deep Dive
+
+The inference path is: raw message → text normalization → TF-IDF feature vector → fitted classifier → spam/ham label. Keep the vectorizer and classifier from the same training run; never fit TF-IDF on test or live input. For model comparison, use a stratified split and inspect false positives separately because incorrectly blocking legitimate messages has a real user cost.
+
+Suggested engineering checks: validate empty input, preserve the training vocabulary at inference, version the serialized pipeline, and test punctuation, URLs, misspellings, and unseen vocabulary.
