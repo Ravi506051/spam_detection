@@ -79,3 +79,9 @@ Before comparing model versions, keep the same train/test split and record the p
 ## Responsible Use
 
 Treat predictions as decision support rather than certainty. Test with varied message wording, spelling mistakes, and unseen examples, and avoid uploading private SMS conversations to a public demo.
+
+## Project Development Notes
+
+Add a small, versioned evaluation set and compare precision, recall, F1-score, and false-positive examples. Keep text preprocessing identical between training and inference.
+
+For reproducible updates, record the dataset/source version, environment and dependency versions, preprocessing choices, and actual outputs from each run. Keep sample values clearly labelled and do not publish secrets or private data.
