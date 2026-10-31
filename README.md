@@ -99,3 +99,11 @@ Suggested engineering checks: validate empty input, preserve the training vocabu
 - Test empty input, very short messages, URLs, numbers, misspellings, and messages containing mixed-language text.
 - Record the dataset source, split seed, preprocessing choices, and measured test metrics. Do not publish unverified accuracy claims.
 - For deployment, keep dependencies pinned and avoid logging users' private SMS content.
+
+## Engineering Notes
+
+- Keep the same text-cleaning and TF-IDF pipeline for both training and inference.
+- Use a stratified train/test split when class proportions are imbalanced.
+- Review false positives and false negatives separately; precision and recall have different operational costs.
+- Persist the fitted vectorizer and classifier together so deployment uses the exact training vocabulary.
+- Add input validation for empty messages and unexpected text encodings.
