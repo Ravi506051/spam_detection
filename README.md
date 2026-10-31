@@ -91,3 +91,11 @@ For reproducible updates, record the dataset/source version, environment and dep
 The inference path is: raw message → text normalization → TF-IDF feature vector → fitted classifier → spam/ham label. Keep the vectorizer and classifier from the same training run; never fit TF-IDF on test or live input. For model comparison, use a stratified split and inspect false positives separately because incorrectly blocking legitimate messages has a real user cost.
 
 Suggested engineering checks: validate empty input, preserve the training vocabulary at inference, version the serialized pipeline, and test punctuation, URLs, misspellings, and unseen vocabulary.
+
+## Reproducibility and Engineering Notes
+
+- Keep the text preprocessing and vectorizer identical between training and inference; save them with the classifier as one pipeline where possible.
+- Use a stratified train/test split and inspect precision, recall, F1-score, and the confusion matrix, especially the spam false-positive rate.
+- Test empty input, very short messages, URLs, numbers, misspellings, and messages containing mixed-language text.
+- Record the dataset source, split seed, preprocessing choices, and measured test metrics. Do not publish unverified accuracy claims.
+- For deployment, keep dependencies pinned and avoid logging users' private SMS content.
