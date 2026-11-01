@@ -107,3 +107,10 @@ Suggested engineering checks: validate empty input, preserve the training vocabu
 - Review false positives and false negatives separately; precision and recall have different operational costs.
 - Persist the fitted vectorizer and classifier together so deployment uses the exact training vocabulary.
 - Add input validation for empty messages and unexpected text encodings.
+
+## Maintainer's Next-Step Engineering Plan
+
+- Package text cleaning, TF-IDF vectorization, and classification in one fitted pipeline so inference always uses the training vocabulary.
+- Add tests for blank messages, URLs, punctuation, spelling variations, and unseen words.
+- Inspect false positives separately from false negatives and record the test-set split and measured metrics.
+- Keep sample SMS data synthetic or anonymized; never commit private message content.
