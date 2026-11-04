@@ -34,3 +34,15 @@ Report metrics from an actual held-out test run; do not assume an accuracy score
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
+
+## Skills Demonstrated
+
+- Text preprocessing
+- TF-IDF feature extraction
+- Naive Bayes classification
+- precision/recall/F1 evaluation
+- Streamlit deployment.
+
+## Portfolio Context
+
+This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
