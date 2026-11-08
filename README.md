@@ -1,48 +1,36 @@
 # SMS Spam Detection
 
-A machine-learning project that classifies text messages as **spam** or **ham** (legitimate). The repository demonstrates a complete text-classification workflow, from preprocessing to interactive prediction.
+A machine-learning application that classifies text messages as **spam** or **ham** (legitimate). The project demonstrates a text-classification workflow from preprocessing to interactive prediction.
 
-## Core workflow
+## Pipeline
 1. Load and inspect labelled SMS data.
 2. Clean and normalize message text.
-3. Convert text into numerical features with TF-IDF.
+3. Convert text into numerical features using TF-IDF.
 4. Train a Multinomial Naive Bayes classifier.
-5. Evaluate predictions using precision, recall, F1-score and a confusion matrix.
-6. Use the Streamlit interface to test messages.
+5. Evaluate with precision, recall, F1-score, and a confusion matrix.
+6. Test messages through the Streamlit interface.
 
 ## Technology
 Python · Pandas · Scikit-learn · TF-IDF · Multinomial Naive Bayes · Streamlit
 
-## Run locally
+## Run Locally
 ```bash
 git clone https://github.com/Ravi506051/spam_detection.git
 cd spam_detection
 python -m venv .venv
-# Windows: .venv\\Scripts\\activate
+# Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python -m streamlit run app.py
 ```
-If a requirements file is not present, install the dependencies used by the project before launching the app.
+If the dependency file or application entry point differs in your checkout, use the paths present in the repository.
 
-## Evaluation and responsible use
-Report metrics from an actual held-out test run; do not assume an accuracy score. Review false positives as well as false negatives. Keep the fitted vectorizer and classifier together, validate empty input, and never upload private SMS conversations to a public demo.
+## Evaluation and Responsible Use
+Report metrics from a held-out test set rather than assuming a fixed accuracy. Review false positives and false negatives, validate empty or unusual input, and keep the fitted vectorizer paired with its classifier. Do not submit private SMS conversations to a public demo.
 
-## Possible extensions
+## Future Improvements
 - Compare Naive Bayes with Logistic Regression and linear SVM.
-- Add tests for URLs, misspellings, punctuation and unseen vocabulary.
-- Save a reproducible evaluation report and model version.
+- Test URLs, misspellings, punctuation, and unseen vocabulary.
+- Add reproducible evaluation reports and model versioning.
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
-
-## Skills Demonstrated
-
-- Text preprocessing
-- TF-IDF feature extraction
-- Naive Bayes classification
-- precision/recall/F1 evaluation
-- Streamlit deployment.
-
-## Portfolio Context
-
-This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
