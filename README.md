@@ -42,3 +42,10 @@ For a spam filter, false positives can be especially disruptive because legitima
 ## Reproducibility
 
 Record the dataset source, train/test split, random seed, preprocessing steps, and model configuration alongside evaluation results. Do not claim a fixed accuracy unless it is measured from the current code and a held-out test set.
+
+## Further Engineering Notes
+
+- **Evaluation:** Review precision, recall, F1-score, and the confusion matrix rather than relying on accuracy alone.
+- **Error analysis:** Inspect false positives and false negatives to understand which message patterns cause mistakes.
+- **Responsible use:** Treat predictions as decision support; review uncertain messages before taking action.
+- **Next steps:** Compare text vectorization and classification baselines, then document reproducible test results.
