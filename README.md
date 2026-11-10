@@ -34,3 +34,11 @@ Report metrics from a held-out test set rather than assuming a fixed accuracy. R
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
+
+## Error Analysis
+
+For a spam filter, false positives can be especially disruptive because legitimate messages may be hidden. Review false positives and false negatives separately, inspect performance across different message styles, and choose a decision threshold based on the intended use case. Keep preprocessing and vectorizer settings identical between training and inference.
+
+## Reproducibility
+
+Record the dataset source, train/test split, random seed, preprocessing steps, and model configuration alongside evaluation results. Do not claim a fixed accuracy unless it is measured from the current code and a held-out test set.
